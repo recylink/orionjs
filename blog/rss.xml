@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Orionjs Blog</title>
+        <link>https://orionjs.com/blog</link>
+        <description>Orionjs Blog</description>
+        <lastBuildDate>Thu, 23 Aug 2018 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Hello World]]></title>
+            <link>https://orionjs.com/blog/2018/08/23/hello-world</link>
+            <guid>/2018/08/23/hello-world</guid>
+            <pubDate>Thu, 23 Aug 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Goodbye Meteor, hello Orionjs.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="goodbye-meteor-hello-orionjs">Goodbye Meteor, hello Orionjs.<a class="hash-link" href="#goodbye-meteor-hello-orionjs" title="Direct link to heading">​</a></h2><p>When I first used Meteor, I was amazed. It was so fast to write, so easy, it
+felt like magic. But after some years, the apps I was creating required more
+complexity, the code base started to get bigger and everything became slow and
+buggy. Then I started to use apollo, without leaving Meteor, but it felt like
+using the wrong tool for the job.</p><p>The desition to start a new framework is not easy, you must commit for a long
+time, but I didn't found what I was looking for anywhere. So I decided to create
+Orionjs.</p><p>When designing how it will work, how the structure will be, and also thinking
+what was what Meteor did wrong I ended up with the following points.</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="write-as-little-as-possible">Write as little as possible<a class="hash-link" href="#write-as-little-as-possible" title="Direct link to heading">​</a></h3><p>The most important thing in Orionjs is that you can achieve big thing with very
+little code, everything is made to be reused. This makes apps less complex and
+fail less.</p><p>Orionjs automatically handles the GraphQL schema creation, validation,
+authentication and many more things that make you write code really fast.</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="simple-to-use-and-learn">Simple to use and learn<a class="hash-link" href="#simple-to-use-and-learn" title="Direct link to heading">​</a></h3><p>Orionjs must always keep simple. All complex things like subscriptions (using
+GraphQL subscriptions), authentication (singing every request and with man in
+the middle protection) and connection with the server (apollo configuration) are
+handled for you and presented in an easy way.</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="dont-do-it-all">Don't do it all<a class="hash-link" href="#dont-do-it-all" title="Direct link to heading">​</a></h3><p>When Meteor was created there was no consensus on a package system for Node, so
+they created their own. Add to that, managing the build system, create the
+communication layer between client and server, and all that pieces of code that
+make Meteor a big layer over Node. It feels like another ecosystem. I think if
+Meteor was created today it would try to do all that things.</p><p>That's why Orionjs does only what it's not already done. It uses babel, Apollo,
+micro, MongoDB, and more.</p><hr><p>I had great time writing with Meteor, but now, six years after it was created,
+it's time to turn the page.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
