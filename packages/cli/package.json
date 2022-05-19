@@ -1,8 +1,8 @@
 {
-  "name": "@diegoolavarria-orion-js/cli",
+  "name": "@diegoolavarria/orion-js-cli",
   "version": "2.4.1",
   "main": "index.js",
-  "author": "nicolaslopezj",
+  "author": "diegoolavarria",
   "license": "MIT",
   "bin": {
     "orion": "./build/index.js"
