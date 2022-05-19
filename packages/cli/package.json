@@ -1,6 +1,6 @@
 {
   "name": "@diegoolavarria/orion-js-cli",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "main": "index.js",
   "author": "diegoolavarria",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "test": "exit 0"
   },
   "dependencies": {
+    "@babel/plugin-transform-block-scoping": "^7.17.12",
     "@babel/runtime": "^7.5.5",
     "@babel/traverse": "^7.18.0",
     "async-exit-hook": "^2.0.1",
