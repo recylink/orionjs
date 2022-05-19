@@ -15,8 +15,7 @@ export default async function () {
     const currentVersion = pjson.version
 
     if (currentVersion !== latestVersion) {
-      console.log('You are running an outdated version of the orionjs cli')
-      console.log('Using @diegoolavarria/orion-js-cli"\n')
+      console.log('You are running an outdated version of the RECYLINK orionjs cli')
     }
   } catch (error) {}
 }

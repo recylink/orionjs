@@ -7,8 +7,7 @@ import has from 'lodash/has'
 
 export default async function (options) {
   global.processOptions = options
-  console.log('tEST')
-  console.log(colors.bold('\nOrionjs App ' + colors.green(colors.bold('V2\n'))))
+  console.log(colors.bold('\nRecylink - Orionjs App ' + colors.green(colors.bold('V2\n'))))
 
   if (!has(process.env, 'MONGO_URL')) {
     try {
