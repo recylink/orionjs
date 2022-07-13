@@ -1,13 +1,14 @@
-import {getServer, getViewer} from '@orion-js/app'
-import {execute, subscribe} from 'graphql'
-import {SubscriptionServer} from 'subscriptions-transport-ws'
+import {getServer, getViewer} from '@recylink/orion-js-app'
 import {PubSub} from 'graphql-subscriptions'
 import {setPubsub} from './pubsub'
+import {WebSocketServer} from 'ws'
+import {useServer} from 'graphql-ws/lib/use/ws'
 
 export default function ({schema}, options) {
   setPubsub(options.pubsub || new PubSub())
 
   const server = getServer()
+
   if (!server) {
     throw new Error(
       'Error starting GraphQL WebSocket. You must start http server before starting GraphQL WebSocket'
@@ -15,12 +16,20 @@ export default function ({schema}, options) {
   }
 
   const path = '/subscriptions'
-  const subServer = new SubscriptionServer(
+
+  const wsServer = new WebSocketServer({
+    // This is the `httpServer` returned by createServer(app);
+    server,
+    // Pass a different path here if your ApolloServer serves at
+    // a different path.
+    path
+  })
+
+  const serverCleanup = useServer(
     {
-      execute,
-      subscribe,
       schema,
-      async onConnect(connectionParams, webSocket) {
+      context: async (ctx, msg, args) => {
+        const {connectionParams} = ctx
         try {
           const params = {
             headers: {
@@ -38,14 +47,10 @@ export default function ({schema}, options) {
           const viewer = await getViewer()
           return viewer
         }
-      },
-      onDisconnect() {}
+      }
     },
-    {
-      server,
-      path
-    }
+    wsServer
   )
 
-  return subServer
+  return serverCleanup
 }

@@ -1,8 +1,8 @@
 {
-  "name": "@orion-js/file-manager",
-  "version": "2.4.2",
+  "name": "@recylink/orion-js-file-manager",
+  "version": "2.4.3",
   "main": "lib/index.js",
-  "author": "nicolaslopezj",
+  "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./lib && babel ./src --out-dir ./lib",
@@ -21,12 +21,12 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.5.5",
-    "@orion-js/app": "^2.4.2",
+    "@recylink/orion-js-app": "^2.4.8",
     "babel-jest": "^22.4.3",
     "jest": "^22.4.3"
   },
   "peerDependencies": {
-    "@orion-js/app": "*"
+    "@recylink/orion-js-app": "*"
   },
   "publishConfig": {
     "access": "public"

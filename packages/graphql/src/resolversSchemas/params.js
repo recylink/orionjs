@@ -1,4 +1,4 @@
-import {resolver, UserError} from '@orion-js/app'
+import {resolver, UserError} from '@recylink/orion-js-app'
 
 import ResolverParams from './ResolverParams'
 

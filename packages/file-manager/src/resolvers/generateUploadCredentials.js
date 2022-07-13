@@ -1,4 +1,4 @@
-import {resolver, generateId, Model} from '@orion-js/app'
+import {resolver, generateId, Model} from '@recylink/orion-js-app'
 import AWS from 'aws-sdk'
 import {getAWSCredentials} from '../credentials'
 import Files from '../Files'
@@ -72,7 +72,7 @@ export default resolver({
             'Content-Type': params.type
           }
         },
-        function(error, data) {
+        function (error, data) {
           if (error) reject(error)
           else resolve(data)
         }

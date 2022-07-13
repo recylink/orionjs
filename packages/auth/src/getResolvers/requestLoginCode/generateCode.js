@@ -1,6 +1,6 @@
-import {generateId} from '@orion-js/app'
+import {generateId} from '@recylink/orion-js-app'
 
-export default async function(user) {
+export default async function (user) {
   const chars = 'abcdefghjkmnopqrstuvwxyz'
   const code = generateId(6, chars)
   const token = generateId()

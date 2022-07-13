@@ -1,6 +1,6 @@
 import serializeSchema from './serializeSchema'
 import getBasicResultQuery from './getBasicResultQuery'
-import {Model, resolver} from '@orion-js/app'
+import {Model, resolver} from '@recylink/orion-js-app'
 
 export default new Model({
   name: 'ResolverParams',

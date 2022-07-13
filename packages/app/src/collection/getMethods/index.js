@@ -30,10 +30,10 @@ export default function (collection) {
         const result = await funcs.remove(doc._id)
         return result
       }
-      item.update = async function (modifier) {
-        const result = await funcs.update(doc._id, modifier)
+      item.update = async function (modifier, options, viewer) {
+        const result = await funcs.update(doc._id, modifier, options, viewer)
         if (result.modifiedCount === 1) {
-          updateItemWithModifier(item, modifier)
+          updateItemWithModifier(item, modifier, options, viewer)
         }
         return result
       }
@@ -59,7 +59,8 @@ export default function (collection) {
     remove: handleError(remove(info)),
     deleteOne: handleError(deleteOne(info)),
     deleteMany: handleError(deleteMany(info)),
-    upsert: handleError(upsert(info))
+    upsert: handleError(upsert(info)),
+    getSchema: model ? model.getSchema : () => {}
   }
 
   return funcs

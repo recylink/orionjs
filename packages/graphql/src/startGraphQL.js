@@ -1,20 +1,43 @@
-import {route} from '@orion-js/app'
+import {route} from '@recylink/orion-js-app'
 import {ApolloServer} from 'apollo-server-micro'
 import startGraphiQL from './startGraphiQL'
-import getApolloOptions from './getApolloOptions'
 import startWebsocket from './startWebsocket'
 import micro from 'micro'
 import {runHttpQuery} from 'apollo-server-core'
+import buildSchema from './buildSchema'
+import formatError from './formatError'
 
 global.globalMicro = micro
 
 export default async function (options) {
-  const apolloOptions = await getApolloOptions(options)
-  startGraphiQL(apolloOptions, options)
+  const schema = await buildSchema(options)
 
-  if (options.subscriptions) {
-    startWebsocket(apolloOptions, options)
+  const serverCleanup = startWebsocket({schema}, options)
+
+  const apolloOptions = {
+    endpointURL: '/graphql',
+    subscriptionsEndpoint: `/subscriptions`,
+    schema,
+    formatError,
+    useGraphiql: options.useGraphiql || true,
+    context: integrationContext => {
+      return integrationContext.req._orionjsViewer
+    },
+    ...options,
+    plugins: [
+      {
+        async serverWillStart() {
+          return {
+            async drainServer() {
+              await serverCleanup.dispose()
+            }
+          }
+        }
+      }
+    ]
   }
+
+  startGraphiQL(apolloOptions, options)
 
   const apolloServer = new ApolloServer(apolloOptions)
   await apolloServer.start()

@@ -25,5 +25,6 @@ export const startServer = function () {
 }
 
 export const getServer = function () {
-  return server
+  if (server) return server
+  return startServer()
 }

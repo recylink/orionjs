@@ -1,8 +1,8 @@
 import JobsCollection from '../JobsCollection'
 import defaultGetNextRun from '../helpers/defaultGetNextRun'
-import {generateId, config} from '@orion-js/app'
+import {generateId, config} from '@recylink/orion-js-app'
 
-export default function(job) {
+export default function (job) {
   const {logger} = config()
   return async (params, jobData) => {
     try {

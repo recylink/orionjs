@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import File from '../File'
 import Files from '../Files'
 

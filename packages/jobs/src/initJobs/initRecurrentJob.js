@@ -1,5 +1,5 @@
 import JobsCollection from '../JobsCollection'
-import {generateId} from '@orion-js/app'
+import {generateId} from '@recylink/orion-js-app'
 
 export default async function (job) {
   const inDb = await JobsCollection.findOne({job: job.identifier})

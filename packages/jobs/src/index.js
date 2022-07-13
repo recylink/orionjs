@@ -2,7 +2,7 @@ import Jobs from './JobsCollection'
 import job from './job'
 import Daemon from './daemon'
 import initJobs from './initJobs'
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 import DeamonStats from './daemon/DaemonStats'
 
 let stats = null

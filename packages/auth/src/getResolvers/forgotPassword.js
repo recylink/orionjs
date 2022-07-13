@@ -1,4 +1,4 @@
-import {resolver, generateId} from '@orion-js/app'
+import {resolver, generateId} from '@recylink/orion-js-app'
 import findUserByEmail from '../helpers/findUserByEmail'
 
 export default ({Users, Session, Sessions, sendForgotPasswordToken}) =>
@@ -17,7 +17,7 @@ export default ({Users, Session, Sessions, sendForgotPasswordToken}) =>
     },
     returns: Boolean,
     mutation: true,
-    resolve: async function({email, password}) {
+    resolve: async function ({email, password}) {
       const user = await findUserByEmail({email, Users})
       const token = generateId() + generateId()
       const date = new Date()

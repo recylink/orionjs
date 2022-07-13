@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import findUserByEmail from '../../helpers/findUserByEmail'
 import {DateTime} from 'luxon'
 import generateCode from './generateCode'
@@ -25,9 +25,7 @@ export default ({Users, sendLoginCode, createUserAtLoginWithCode}) =>
           if (user.services.loginCode) {
             const lastDate = DateTime.fromJSDate(user.services.loginCode.date)
 
-            const date = DateTime.local()
-              .minus({seconds: 10})
-              .toJSDate()
+            const date = DateTime.local().minus({seconds: 10}).toJSDate()
             if (lastDate > date) {
               return 'mustWaitToRequestLoginCode'
             }
@@ -37,7 +35,7 @@ export default ({Users, sendLoginCode, createUserAtLoginWithCode}) =>
     },
     returns: String,
     mutation: true,
-    resolve: async function({email}, viewer) {
+    resolve: async function ({email}, viewer) {
       const user = await findUserByEmail({email, Users})
       const {token, code} = await generateCode(user)
       await sendLoginCode({user, email, code}, viewer)

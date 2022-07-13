@@ -2,7 +2,7 @@ import rp from 'request-promise'
 
 export default async function () {
   try {
-    const url = 'http://registry.npmjs.org/@orion-js/cli'
+    const url = 'https://registry.npmjs.org/@recylink/orion-js-cli'
     const response = await rp({
       uri: url,
       method: 'GET',
@@ -14,8 +14,10 @@ export default async function () {
     const latestVersion = response['dist-tags'].latest
     const currentVersion = pjson.version
 
+    console.log(`You are running version ${currentVersion} of RECYLINK Orion js Framework`)
+
     if (currentVersion !== latestVersion) {
-      console.log('You are running an outdated version of the RECYLINK orionjs cli')
+      console.log(`You are running an outdated version of RECYLINK Orion js Framework`)
     }
   } catch (error) {}
 }

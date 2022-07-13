@@ -1,4 +1,4 @@
-import {Model} from '@orion-js/app'
+import {Model} from '@recylink/orion-js-app'
 import Files from '../Files'
 import pick from 'lodash/pick'
 import omit from 'lodash/omit'

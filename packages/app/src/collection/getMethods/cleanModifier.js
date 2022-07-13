@@ -1,11 +1,11 @@
-import {cleanKey, clean} from '@orion-js/schema'
+import {cleanKey, clean} from '@recylink/orion-js-schema'
 import isEmpty from 'lodash/isEmpty'
 import isNil from 'lodash/isNil'
 import isUndefined from 'lodash/isUndefined'
 import isEqual from 'lodash/isEqual'
 import fromDot from '../../database/dot/fromDot'
 
-const shouldCheck = function(key) {
+const shouldCheck = function (key) {
   if (key === '$pushAll') throw new Error('$pushAll is not supported; use $push + $each')
   return ['$pull', '$pullAll', '$pop', '$slice'].indexOf(key) === -1
 }

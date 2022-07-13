@@ -1,4 +1,4 @@
-import {setGetViewer, setCorsOptions} from '@orion-js/app'
+import {setGetViewer, setCorsOptions} from '@recylink/orion-js-app'
 import loginWithPassword from './loginWithPassword'
 import logout from './logout'
 import changePassword from './changePassword'

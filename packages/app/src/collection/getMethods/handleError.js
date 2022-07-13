@@ -1,6 +1,6 @@
-import {ValidationError} from '@orion-js/schema'
+import {ValidationError} from '@recylink/orion-js-schema'
 
-export default function(func) {
+export default function (func) {
   return async (...args) => {
     try {
       return await func(...args)

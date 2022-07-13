@@ -2,7 +2,7 @@ import initItem from './initItem'
 import includes from 'lodash/includes'
 import clone from 'lodash/clone'
 import resolveParam from './resolveParam'
-import {validate, clean} from '@orion-js/schema'
+import {validate, clean} from '@recylink/orion-js-schema'
 import checkResolvedResolvers from './checkResolvedResolvers'
 import modelToSchema from './modelToSchema'
 
@@ -95,7 +95,7 @@ export default class Model {
     extendSchema = {},
     extendResolvers = {}
   }) {
-    const getSchema = function(_schema) {
+    const getSchema = function (_schema) {
       const schema = {}
 
       const keys = Object.keys(_schema)

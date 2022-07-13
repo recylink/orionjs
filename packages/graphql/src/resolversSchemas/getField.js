@@ -1,6 +1,6 @@
 import isPlainObject from 'lodash/isPlainObject'
 import isArray from 'lodash/isArray'
-import {getFieldType} from '@orion-js/schema'
+import {getFieldType} from '@recylink/orion-js-schema'
 import omit from 'lodash/omit'
 import getScalar from '../buildSchema/getType/getScalar'
 

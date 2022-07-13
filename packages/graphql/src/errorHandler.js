@@ -1,4 +1,4 @@
-import {config, UserError} from '@orion-js/app'
+import {config, UserError} from '@recylink/orion-js-app'
 import crypto from 'crypto'
 
 export default function errorHandler(error, data) {

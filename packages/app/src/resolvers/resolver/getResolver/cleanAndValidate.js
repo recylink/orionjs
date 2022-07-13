@@ -1,7 +1,7 @@
 import getSchema from './getSchema'
-import {validate, clean} from '@orion-js/schema'
+import {validate, clean} from '@recylink/orion-js-schema'
 
-export default async function({params, callParams, viewer}) {
+export default async function ({params, callParams, viewer}) {
   if (params) {
     const options = {
       filter: false,

@@ -1,8 +1,8 @@
 {
-  "name": "@diegoolavarria/orion-js-cli",
-  "version": "2.4.8",
+  "name": "@recylink/orion-js-cli",
+  "version": "2.4.31",
   "main": "index.js",
-  "author": "diegoolavarria",
+  "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
   "bin": {
     "orion": "./build/index.js"
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-block-scoping": "^7.17.12",
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.17.9",
     "@babel/traverse": "^7.18.0",
     "async-exit-hook": "^2.0.1",
     "babel-jest": "^26.6.1",
@@ -31,10 +31,10 @@
     "walk-sync": "^0.3.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5"
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.12",
+    "@babel/plugin-transform-runtime": "^7.17.12",
+    "@babel/preset-env": "^7.17.12"
   },
   "publishConfig": {
     "access": "public"

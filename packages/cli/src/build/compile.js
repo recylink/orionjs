@@ -12,7 +12,6 @@ export default async function (dirPath) {
     await Promise.all(files.map(file => compileFile(file, finalDirPath)))
     return true
   } catch (error) {
-    console.log(colors.red(`=> Syntax error at ${error.message}`))
     if (error._babel) {
       console.log(error.codeFrame)
     } else {

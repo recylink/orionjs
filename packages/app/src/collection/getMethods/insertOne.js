@@ -1,4 +1,4 @@
-import {validate, clean} from '@orion-js/schema'
+import {validate, clean} from '@recylink/orion-js-schema'
 import isPlainObject from 'lodash/isPlainObject'
 import generateId from '../../helpers/generateId'
 import fromDot from '../../database/dot/fromDot'

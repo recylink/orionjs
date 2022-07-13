@@ -1,4 +1,4 @@
-import {resolver, ConfigurationError, Model} from '@orion-js/app'
+import {resolver, ConfigurationError, Model} from '@recylink/orion-js-app'
 import speakeasy from 'speakeasy'
 import qr from 'qr-image'
 
@@ -19,7 +19,7 @@ export default ({Users, Session, twoFactor}) =>
     requireUserId: true,
     returns: model,
     mutation: true,
-    resolve: async function(params, viewer) {
+    resolve: async function (params, viewer) {
       const user = await Users.findOne(viewer.userId)
       if (await user.hasTwoFactor()) {
         throw new Error('User has two factor')

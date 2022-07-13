@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 
 export default ({Users}) =>
   resolver({
@@ -11,7 +11,7 @@ export default ({Users}) =>
     },
     returns: Users.model,
     mutation: false,
-    resolve: async function({email}) {
+    resolve: async function ({email}) {
       if (!email) return null
       email = email.toLowerCase()
 

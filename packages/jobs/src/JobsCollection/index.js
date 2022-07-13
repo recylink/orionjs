@@ -1,4 +1,4 @@
-import {Collection, Model} from '@orion-js/app'
+import {Collection, Model} from '@recylink/orion-js-app'
 import schema from './schema'
 
 export default new Collection({

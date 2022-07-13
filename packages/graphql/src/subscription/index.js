@@ -1,6 +1,6 @@
 import {getPubsub} from '../pubsub'
 import getChannelName from './getChannelName'
-import {checkResolverPermissions} from '@orion-js/app'
+import {checkResolverPermissions} from '@recylink/orion-js-app'
 
 export default function (options) {
   const {params, returns, checkPermission, ...otherOptions} = options

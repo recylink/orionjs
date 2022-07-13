@@ -1,7 +1,10 @@
 import JobsCollection from '../JobsCollection'
-import {generateId, config} from '@orion-js/app'
+import {generateId, config} from '@recylink/orion-js-app'
 
-export default async function(params, {identifier, waitToRun, ignoreDuplicationError = false} = {}) {
+export default async function (
+  params,
+  {identifier, waitToRun, ignoreDuplicationError = false} = {}
+) {
   const {logger} = config()
   const getJobId = maxRetries =>
     new Promise((resolve, reject) => {

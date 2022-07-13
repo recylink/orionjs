@@ -1,8 +1,8 @@
 import includes from 'lodash/includes'
-import {PermissionsError} from '@orion-js/app'
+import {PermissionsError} from '@recylink/orion-js-app'
 
 export default options =>
-  function({roles, role}, viewer) {
+  function ({roles, role}, viewer) {
     if (!roles) roles = []
 
     if (role) {

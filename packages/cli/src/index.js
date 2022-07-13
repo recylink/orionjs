@@ -3,7 +3,7 @@ import program from 'commander'
 import start from './start'
 import build from './build'
 import colors from 'colors/safe'
-import create from './create'
+// import create from './create'
 import checkVersion from './helpers/checkVersion'
 import test from './test'
 import './handleErrors'
@@ -34,12 +34,12 @@ program
   .option('-o, --output [output]', 'Output directory')
   .action(run(build))
 
-program
-  .command('create')
-  .description('Creates a new Orionjs project')
-  .option('--name [name]', 'Name of the project')
-  .option('--kit [kit]', 'Which starter kit to use')
-  .action(run(create))
+// program
+//   .command('create')
+//   .description('Creates a new Orionjs project')
+//   .option('--name [name]', 'Name of the project')
+//   .option('--kit [kit]', 'Which starter kit to use')
+//   .action(run(create))
 
 program.version(require('../package.json').version, '-v --version')
 

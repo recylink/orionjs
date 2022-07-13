@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import createSession from '../helpers/createSession'
 import {DateTime} from 'luxon'
 import hashPassword from '../helpers/hashPassword'
@@ -10,9 +10,7 @@ export default ({Users, Session, Sessions}) =>
       token: {
         type: String,
         async custom(token) {
-          const maxDate = DateTime.local()
-            .minus({minutes: 30})
-            .toJSDate()
+          const maxDate = DateTime.local().minus({minutes: 30}).toJSDate()
           const exists = await Users.find({
             'services.forgot.token': token,
             'services.forgot.date': {$gte: maxDate}
@@ -28,7 +26,7 @@ export default ({Users, Session, Sessions}) =>
     },
     returns: Session,
     mutation: true,
-    resolve: async function({token, password}, viewer) {
+    resolve: async function ({token, password}, viewer) {
       const user = await Users.findOne({'services.forgot.token': token})
 
       const modifier = {

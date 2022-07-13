@@ -3,7 +3,7 @@ import Worker from '../Worker'
 import JobRepository from './JobsRepository'
 import sleep from '../helpers/sleep'
 import loop from './loop'
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
 class Daemon {
   constructor() {

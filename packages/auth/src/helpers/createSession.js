@@ -1,4 +1,4 @@
-import {generateId} from '@orion-js/app'
+import {generateId} from '@recylink/orion-js-app'
 import {getOptions} from '../optionsStore'
 
 const hasEmailsVerified = function (user) {

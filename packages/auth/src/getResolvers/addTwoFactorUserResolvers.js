@@ -1,6 +1,6 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 
-export default function({Users, twoFactor}) {
+export default function ({Users, twoFactor}) {
   Users.model.resolvers.hasTwoFactor = resolver({
     returns: Boolean,
     async resolve(user, params, viewer) {

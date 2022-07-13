@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import checkPassword from '../helpers/checkPassword'
 import hashPassword from '../helpers/hashPassword'
 import hasPassword from '../helpers/hasPassword'
@@ -34,7 +34,7 @@ export default ({Users, Session}) =>
     },
     returns: Boolean,
     mutation: true,
-    resolve: async function({oldPassword, newPassword}, viewer) {
+    resolve: async function ({oldPassword, newPassword}, viewer) {
       await Users.update(viewer.userId, {
         $set: {
           'services.password': {

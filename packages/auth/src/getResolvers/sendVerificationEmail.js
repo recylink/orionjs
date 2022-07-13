@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import generateVerifyEmailToken from '../helpers/generateVerifyEmailToken'
 
 export default ({Users, sendEmailVerificationToken}) =>

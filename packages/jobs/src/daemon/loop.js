@@ -1,9 +1,9 @@
 import JobRepository from './JobsRepository'
 import getFreeWorker from './getFreeWorker'
 import createJobExecutor from './createJobExecutor'
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
-export default async function({jobs, workers}) {
+export default async function ({jobs, workers}) {
   const {logger, jobs: jobsConfig} = config()
   const defaultConfig = {
     polling: 5000,

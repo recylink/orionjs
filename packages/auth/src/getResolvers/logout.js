@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import deleteSession from '../helpers/deleteSession'
 
 export default ({Users, Session, Sessions}) =>
@@ -12,7 +12,7 @@ export default ({Users, Session, Sessions}) =>
     },
     returns: Boolean,
     mutation: true,
-    resolve: async function({sessionId}, viewer) {
+    resolve: async function ({sessionId}, viewer) {
       if (!viewer.session) return false
 
       if (!sessionId) {

@@ -13,11 +13,22 @@ export default runOnce(async function (options = {}) {
   await execute('rm -rf .orion/build')
   const files = await globby('app/**/*')
   try {
-    await Promise.all(files.map(file => compileFile(file)))
+    await Promise.all(
+      // files.map(async file => {
+      //   try {
+      //     await compileFile(file)
+      //   } catch (error) {
+      //     console.log({file})
+      //   }
+      // })
+      files.map(file => compileFile(file))
+    )
     return true
   } catch (error) {
     console.log(colors.red(`=> Syntax error at ${error.message}`))
+
     if (error._babel) {
+      console.log('BABEL Error:')
       console.log(error.codeFrame)
     } else {
       console.error(colors.red(error))

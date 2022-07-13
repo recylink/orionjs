@@ -1,4 +1,4 @@
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 import JobsRepository from './JobsRepository'
 
 export default class DaemonStats {

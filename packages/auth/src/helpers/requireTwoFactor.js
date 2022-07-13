@@ -1,8 +1,8 @@
 import {getOptions} from '../optionsStore'
 import speakeasy from 'speakeasy'
-import {PermissionsError} from '@orion-js/app'
+import {PermissionsError} from '@recylink/orion-js-app'
 
-export default async function({userId, twoFactorCode} = {}) {
+export default async function ({userId, twoFactorCode} = {}) {
   const options = getOptions()
   if (!options.twoFactor) throw new Error('Two factor is disabled in this app')
   if (!userId) return

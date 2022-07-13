@@ -1,5 +1,5 @@
 import getField from './getField'
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
 export default function (params) {
   const {logger} = config()

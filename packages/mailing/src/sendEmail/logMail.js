@@ -1,4 +1,4 @@
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
 export default function (options) {
   const {logger} = config()

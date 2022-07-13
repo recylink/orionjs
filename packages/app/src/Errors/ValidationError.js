@@ -1,3 +1,3 @@
-import {ValidationError} from '@orion-js/schema'
+import {ValidationError} from '@recylink/orion-js-schema'
 
 export default ValidationError

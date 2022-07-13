@@ -13,6 +13,17 @@ export default async function (options) {
     context: integrationContext => {
       return integrationContext.req._orionjsViewer
     },
-    ...options
+    ...options,
+    plugins: [
+      {
+        async serverWillStart() {
+          return {
+            async drainServer() {
+              await serverCleanup.dispose()
+            }
+          }
+        }
+      }
+    ]
   }
 }

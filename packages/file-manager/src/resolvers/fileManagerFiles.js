@@ -1,4 +1,4 @@
-import {paginatedResolver} from '@orion-js/app'
+import {paginatedResolver} from '@recylink/orion-js-app'
 import escape from 'escape-string-regexp'
 import File from '../File'
 import Files from '../Files'

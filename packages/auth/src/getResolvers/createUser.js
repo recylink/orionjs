@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import hashPassword from '../helpers/hashPassword'
 import createSession from '../helpers/createSession'
 import generateVerifyEmailToken from '../helpers/generateVerifyEmailToken'
@@ -29,7 +29,7 @@ export default ({Session, Users, Sessions, onCreateUser, sendEmailVerificationTo
     },
     returns: Session,
     mutation: true,
-    resolve: async function({email, password, profile}, viewer) {
+    resolve: async function ({email, password, profile}, viewer) {
       const newUser = {
         emails: [
           {

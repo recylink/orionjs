@@ -1,12 +1,11 @@
 {
   "name": "@recylink/orion-js-schema",
-  "version": "2.4.3",
+  "version": "2.4.1",
   "main": "lib/index.js",
   "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./lib && babel ./src --out-dir ./lib",
-    "prepare": "yarn run build",
     "watch": "rm -rf ./lib && babel ./src --watch --out-dir ./lib",
     "test": "jest src"
   },
@@ -15,16 +14,9 @@
     "dot-object": "^1.9.0",
     "lodash": "^4.17.10"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-jest": "^23.4.0",
-    "jest": "^23.4.1"
-  },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "4a35ac0c324fe05db344032f64f6025d8cc8ed42"
+  "gitHead": "4a35ac0c324fe05db344032f64f6025d8cc8ed42",
+  "yalcSig": "57de6e897e6ffe15f2b1692683593a7d"
 }

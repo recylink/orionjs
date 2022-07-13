@@ -1,4 +1,4 @@
-import {resolver} from '@orion-js/app'
+import {resolver} from '@recylink/orion-js-app'
 import speakeasy from 'speakeasy'
 
 export default ({Users, Session}) =>
@@ -11,7 +11,7 @@ export default ({Users, Session}) =>
     },
     returns: Users.model,
     mutation: true,
-    resolve: async function({code}, viewer) {
+    resolve: async function ({code}, viewer) {
       const user = await Users.findOne(viewer.userId)
       if (!user) throw new Error('User not found')
 

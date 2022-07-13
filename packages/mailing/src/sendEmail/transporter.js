@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer'
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
 const {mailing, logger} = config()
 

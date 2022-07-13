@@ -22,13 +22,14 @@ import {
   addPermissionChecker
 } from './resolvers'
 import checkResolverPermissions from './resolvers/resolver/getResolver/checkPermissions'
-import {setGetViewer} from './route/setGetViewer'
+import {setGetViewer, getGetViewer} from './route/setGetViewer'
 import getViewer from './route/handler/getViewer'
 import {getCorsOptions, setCorsOptions} from './route/corsOptions'
 import * as micro from 'micro'
 import cache from './cache'
 import sleep from './helpers/sleep'
 import config from './config'
+import 'regenerator-runtime/runtime'
 
 export {
   connectToDatabase,
@@ -54,6 +55,7 @@ export {
   tokenPaginatedResolver,
   generateId,
   setGetViewer,
+  getGetViewer,
   getViewer,
   getCorsOptions,
   setCorsOptions,

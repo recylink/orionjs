@@ -1,9 +1,9 @@
-import {validateKey, ValidationError} from '@orion-js/schema'
+import {validateKey, ValidationError} from '@recylink/orion-js-schema'
 
 /**
  * Validates $inc
  */
-export default async function({schema, operationDoc, operation}) {
+export default async function ({schema, operationDoc, operation}) {
   const errors = {}
   for (const key of Object.keys(operationDoc)) {
     const value = operationDoc[key]

@@ -1,4 +1,4 @@
-import * as babel from '@babel/core'
+import {transformFileAsync} from '@babel/core'
 import writeFile from '../helpers/writeFile'
 import fs from 'fs'
 import path from 'path'
@@ -24,9 +24,13 @@ export default async function (relativeFilePath, dirPath = '.orion/build') {
     sourceRoot: filePath.replace('/' + relativeFilePath, ''),
     sourceFileName: '/' + relativeFilePath
   }
+  try {
+    const {code, map} = await transformFileAsync(filePath, babelOptions)
 
-  const {code, map} = await babel.transformFileAsync(filePath, babelOptions)
-
-  await writeFile(finalPath, addSourceMapPath(finalPath, code))
-  await writeFile(finalPath + '.map', JSON.stringify(map, null, 2))
+    await writeFile(finalPath, addSourceMapPath(finalPath, code))
+    await writeFile(finalPath + '.map', JSON.stringify(map, null, 2))
+  } catch (error) {
+    console.log('error: transformFileAsync')
+    console.log({filePath})
+  }
 }

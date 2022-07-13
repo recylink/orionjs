@@ -1,6 +1,6 @@
 import lockConfig from '../lockConfig'
 import JobsCollection from '../JobsCollection'
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
 export default class Worker {
   constructor({index}) {

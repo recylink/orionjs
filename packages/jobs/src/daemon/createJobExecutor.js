@@ -1,4 +1,4 @@
-import {config} from '@orion-js/app'
+import {config} from '@recylink/orion-js-app'
 
 const findJob = function (jobs, identifier) {
   const def = jobs[identifier]

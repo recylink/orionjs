@@ -1,4 +1,4 @@
-import {Collection} from '@orion-js/app'
+import {Collection} from '@recylink/orion-js-app'
 import File from '../File'
 
 export default new Collection({

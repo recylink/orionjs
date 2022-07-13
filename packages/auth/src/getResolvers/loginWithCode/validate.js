@@ -1,9 +1,9 @@
-import {ValidationError} from '@orion-js/schema'
+import {ValidationError} from '@recylink/orion-js-schema'
 import {DateTime} from 'luxon'
 
 const maxTries = 6
 
-export default async function({user, token, code}) {
+export default async function ({user, token, code}) {
   const {loginCode} = user.services
   if (!loginCode) {
     throw new ValidationError({code: 'incorrectLoginCode'})
@@ -28,9 +28,7 @@ export default async function({user, token, code}) {
 
   const lastDate = DateTime.fromJSDate(loginCode.date)
 
-  const date = DateTime.local()
-    .minus({minutes: 5})
-    .toJSDate()
+  const date = DateTime.local().minus({minutes: 5}).toJSDate()
   if (lastDate < date) {
     throw new ValidationError({code: 'loginCodeExpired'})
   }
