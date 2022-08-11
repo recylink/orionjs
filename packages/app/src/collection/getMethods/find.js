@@ -29,7 +29,8 @@ export default ({rawCollection, initItem}) =>
         return cursor
       },
       async count() {
-        return await cursor.rawCursor.count()
+        return await rawCollection.countDocuments(selector, options)
+        // return await cursor.rawCursor.count()
       },
       async toArray() {
         const items = await cursor.rawCursor.toArray()

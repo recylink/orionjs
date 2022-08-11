@@ -1,6 +1,6 @@
 {
   "name": "@recylink/orion-js-graphql",
-  "version": "2.4.6",
+  "version": "2.4.10",
   "main": "lib/index.js",
   "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@recylink/orion-js-schema": "^2.4.1",
+    "@recylink/orion-js-schema": "^2.4.3",
     "apollo-server-core": "^3.4.0",
     "apollo-server-micro": "^3.4.0",
     "deep-sort-object": "^1.0.2",

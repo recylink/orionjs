@@ -1414,6 +1414,15 @@
     dot-object "^1.9.0"
     lodash "^4.17.10"
 
+"@recylink/orion-js-schema@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@recylink/orion-js-schema/-/orion-js-schema-2.4.3.tgz#a2706d6c6a086a3092f035c713994234fbd26b34"
+  integrity sha512-oI6Xk9oj60I3VsKanhkTzJN5tnoF1EhKZ/NRp9dztOnOEVHW0ihOtjN2mvrbdYXDVy+vIodotDKgukp3Wq31Kg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dot-object "^1.9.0"
+    lodash "^4.17.10"
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.3.tgz#3802ddd21a50a949b6721ddd72da36e67e7f1b2d"

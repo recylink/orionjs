@@ -16,6 +16,7 @@ export default function errorHandler(error, data) {
       .substring(0, 10)
     error.hash = hash
     logger.error(message, error)
-    throw new UserError('INTERNAL_SERVER_ERROR', 'Internal server error', {hash})
+    throw new UserError(message, error, {hash})
+    // throw new UserError('INTERNAL_SERVER_ERROR', 'Internal server error', {hash})
   }
 }
