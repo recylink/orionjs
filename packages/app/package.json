@@ -1,6 +1,6 @@
 {
   "name": "@recylink/orion-js-app",
-  "version": "2.4.14",
+  "version": "2.4.15",
   "main": "lib/index.js",
   "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.14.0",
-    "@recylink/orion-js-schema": "^2.4.3",
+    "@recylink/orion-js-schema": "^2.4.4",
     "colors": "^1.3.3",
     "dataloader": "^2.0.0",
     "dot-object": "^1.9.0",

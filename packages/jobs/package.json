@@ -1,6 +1,6 @@
 {
   "name": "@recylink/orion-js-jobs",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "main": "lib/index.js",
   "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@recylink/orion-js-app": "^2.4.12",
+    "@recylink/orion-js-app": "^2.4.15",
     "lodash": "^4.17.10",
     "luxon": "^1.2.0"
   },
