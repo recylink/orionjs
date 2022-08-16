@@ -19,7 +19,7 @@ export default ({rawCollection, schema, collection}) =>
 
     if (schema) {
       doc = await clean(schema, fromDot(doc))
-      await validate(schema, doc, viewer)
+      await validate(schema, doc, options, viewer)
     }
 
     await rawCollection.insertOne(doc, options, viewer)
