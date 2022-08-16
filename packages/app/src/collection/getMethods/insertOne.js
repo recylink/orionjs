@@ -6,6 +6,8 @@ import runHooks from './runHooks'
 
 export default ({rawCollection, schema, collection}) =>
   async function insertOne(doc, options, ...args) {
+    let [viewer, ...otherArgs] = args
+
     if (!doc || !isPlainObject(doc)) {
       throw new Error('Insert must receive a document')
     }
@@ -13,14 +15,14 @@ export default ({rawCollection, schema, collection}) =>
       doc._id = generateId()
     }
 
-    await runHooks(collection, 'before.insert', doc, options, ...args)
+    await runHooks(collection, 'before.insert', doc, options, viewer, ...otherArgs)
 
     if (schema) {
       doc = await clean(schema, fromDot(doc))
-      await validate(schema, doc)
+      await validate(schema, doc, viewer)
     }
 
-    await rawCollection.insertOne(doc, options)
-    await runHooks(collection, 'after.insert', doc, options, ...args)
+    await rawCollection.insertOne(doc, options, viewer)
+    await runHooks(collection, 'after.insert', doc, options, viewer, ...otherArgs)
     return doc._id
   }

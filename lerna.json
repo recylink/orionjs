@@ -1,8 +1,14 @@
 {
   "lerna": "2.10.2",
   "packages": [
-    "packages/*"
+    "packages/app",
+    "packages/cli",
+    "packages/graphql",
+    "packages/graphql-client",
+    "packages/jobs",
+    "packages/mailing",
+    "packages/schema"
   ],
-  "version": "2.4.2",
+  "version": "independent",
   "npmClient": "yarn"
 }
