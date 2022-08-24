@@ -3,10 +3,23 @@ import crypto from 'crypto'
 
 export default function errorHandler(error, data) {
   const {logger} = config()
+  console.log(
+    JSON.stringify(
+      {
+        error,
+        data
+      },
+      null,
+      2
+    )
+  )
   const message = `Error in resolver "${data.name}" ${
     data.model ? `of model "${data.model.name}"` : ''
   }`
-  if (error && error.isOrionError) {
+  if (
+    error
+    // && error.isOrionError
+  ) {
     logger.warn(message, error)
   } else {
     const hash = crypto

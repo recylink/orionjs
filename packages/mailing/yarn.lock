@@ -836,13 +836,13 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@recylink/orion-js-app@^2.4.12":
-  version "2.4.12"
-  resolved "https://registry.yarnpkg.com/@recylink/orion-js-app/-/orion-js-app-2.4.12.tgz#0fea1e9d062d5640a43cd52f1cd0c8c2d0253c5f"
-  integrity sha512-cJYhJ7I0R2CAqaXDKo2kG+FrVXZIcNQ8Ghp0tZ3X92SHTB18Y52IF4dWICzEYk+AX1545Ab5U6bnpZtanLHwJw==
+"@recylink/orion-js-app@^2.4.20":
+  version "2.4.20"
+  resolved "https://registry.yarnpkg.com/@recylink/orion-js-app/-/orion-js-app-2.4.20.tgz#cbce5e63b3bb5a1e42b0d021cc0ce60ed20d8e7a"
+  integrity sha512-8gLgr5VqtXhRLgJqz9Pjwsx34hqvLSvz+P6mlUnY913tdbsPdC02JalbVsGG1xazkn1zOGbgrkPpgREP7lcj5w==
   dependencies:
     "@babel/runtime" "^7.14.0"
-    "@recylink/orion-js-schema" "^2.4.3"
+    "@recylink/orion-js-schema" "^2.4.4"
     colors "^1.3.3"
     dataloader "^2.0.0"
     dot-object "^1.9.0"
@@ -853,10 +853,10 @@
     path-to-regexp "^3.0.0"
     regenerator-runtime "^0.13.9"
 
-"@recylink/orion-js-schema@^2.4.3":
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/@recylink/orion-js-schema/-/orion-js-schema-2.4.3.tgz#a2706d6c6a086a3092f035c713994234fbd26b34"
-  integrity sha512-oI6Xk9oj60I3VsKanhkTzJN5tnoF1EhKZ/NRp9dztOnOEVHW0ihOtjN2mvrbdYXDVy+vIodotDKgukp3Wq31Kg==
+"@recylink/orion-js-schema@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@recylink/orion-js-schema/-/orion-js-schema-2.4.4.tgz#420194b40bd18f36f304c0af3526119209f139fd"
+  integrity sha512-Mb+XPPCaWi92MRs+2cPLe8HvOVYMHd4BKlvrV+wCnajLSar4pDJ+kTtuPjjaFJSumjgevgKbsZldCpDjEFoeGQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     dot-object "^1.9.0"

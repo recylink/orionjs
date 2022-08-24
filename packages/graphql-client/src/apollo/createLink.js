@@ -4,7 +4,7 @@ import onError from './onError'
 import createWsLink from './createWsLink'
 import {getMainDefinition} from 'apollo-utilities'
 
-export default function(options) {
+export default function (options) {
   const links = [onError(options)]
 
   if (options.useSubscriptions) {
