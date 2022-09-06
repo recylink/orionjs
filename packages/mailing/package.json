@@ -1,6 +1,6 @@
 {
   "name": "@recylink/orion-js-mailing",
-  "version": "2.4.10",
+  "version": "2.4.11",
   "main": "lib/index.js",
   "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@recylink/orion-js-app": "^2.4.20",
+    "@recylink/orion-js-app": "^2.4.21",
     "lodash": "^4.17.10",
     "luxon": "^1.2.0",
     "nodemailer": "^4.6.6"

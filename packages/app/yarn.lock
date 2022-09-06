@@ -1215,10 +1215,10 @@
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/chokidar-2/-/chokidar-2-2.1.8-no-fsevents.3.tgz#323d72dd25103d0c4fbdce89dadf574a787b1f9b"
   integrity sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==
 
-"@recylink/orion-js-schema@^2.4.3":
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/@recylink/orion-js-schema/-/orion-js-schema-2.4.3.tgz#a2706d6c6a086a3092f035c713994234fbd26b34"
-  integrity sha512-oI6Xk9oj60I3VsKanhkTzJN5tnoF1EhKZ/NRp9dztOnOEVHW0ihOtjN2mvrbdYXDVy+vIodotDKgukp3Wq31Kg==
+"@recylink/orion-js-schema@^2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@recylink/orion-js-schema/-/orion-js-schema-2.4.5.tgz#200263b1d9a39fa46072ee093c6ad5c7f5c03263"
+  integrity sha512-dHUKS4+EJQfOxK5BupR/EBBNF7S26tNaqROPS7IWyRv9Exrx5dfjIGi9d34yCWVqVids1OB5YQKolva897fVUg==
   dependencies:
     "@babel/runtime" "^7.5.5"
     dot-object "^1.9.0"

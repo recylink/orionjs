@@ -1,6 +1,6 @@
 {
   "name": "@recylink/orion-js-schema",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "main": "lib/index.js",
   "author": "diegoolavarria <olavarriaubeda.diego@gmail.com>",
   "license": "MIT",
