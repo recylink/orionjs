@@ -1,7 +1,7 @@
 import isPlainObject from 'lodash/isPlainObject'
 
 export default class ValidationError extends Error {
-  constructor(validationErrors) {
+  constructor(validationErrors, status = 400) {
     if (!isPlainObject(validationErrors)) {
       throw new Error('ValidationError must be initialized with an errors object')
     }
@@ -11,20 +11,28 @@ export default class ValidationError extends Error {
         return `${key}: ${validationErrors[key]}`
       })
       .join(', ')
-    const message = `Validation Error: {${printableErrors}}`
+
+    const message = printableErrors
+
     super(message)
+
     Error.captureStackTrace(this, this.constructor)
 
-    this.code = 'validationError'
-    this.isValidationError = true
     this.isOrionError = true
+    this.code = ValidationError
+    this.isValidationError = true
     this.validationErrors = validationErrors
+    this.status = status
+    this.error = 'ValidationError'
+    this.type = 'ValidationError'
 
-    this.getInfo = () => {
+    this.getErrorData = () => {
       return {
-        error: 'validationError',
+        error: 'ValidationError',
         message: 'Validation Error',
-        validationErrors: validationErrors
+        type: 'ValidationError',
+        validationErrors: validationErrors,
+        status
       }
     }
 
@@ -39,5 +47,9 @@ export default class ValidationError extends Error {
 
       return new ValidationError(newErrors)
     }
+  }
+
+  getStatus() {
+    return 400
   }
 }

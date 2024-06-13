@@ -27,9 +27,9 @@ test('getInfo to return error information in correct format', () => {
   const validationError = {name: Errors.REQUIRED}
   const error = new ValidationError(validationError)
   const info = {
-    error: 'validationError',
     message: 'Validation Error',
-    validationErrors: {name: Errors.REQUIRED}
+    validationErrors: {name: Errors.REQUIRED},
+    status: 400
   }
-  expect(error.getInfo()).toEqual(info)
+  expect(error.getErrorData()).toEqual(info)
 })
